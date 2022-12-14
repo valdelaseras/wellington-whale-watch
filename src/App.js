@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Infographic from "./components/Infographic/Infographic";
+import Nav from "./components/Decorator/Nav/Nav";
+import Footer from "./components/Decorator/Footer/Footer";
+import Landing from "./components/Landing/Landing";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <nav className="nav">
+            <Nav/>
+        </nav>
+        <main className="main">
+            <article>
+                <div className="grid">
+                    <div className="column">
+                        <Landing/>
+                        <Infographic year={'2022'} speciesTotal={40} sightingsTotal={248}/>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer className="footer">
+            <Footer/>
+        </footer>
     </div>
   );
 }

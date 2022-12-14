@@ -1,0 +1,9 @@
+ul.horizontal-list,
+ol.horizontal-list {
+    display: inline-block;
+}
+
+ul.horizontal-list > li,
+ol.horizontal-list >li {
+    display: inline-block;
+}

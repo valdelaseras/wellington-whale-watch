@@ -1,0 +1,10 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #222;
+
+    --primary-accent-color: deepskyblue;
+    /*--secondary-accent-color: ;*/
+
+    --primary-font-color: var(--primary-color);
+    --secondary-font-color: var(--secondary-color);
+}

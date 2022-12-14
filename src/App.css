@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
+/*base*/
+@import './styles/base/base.css';
+@import './styles/base/reset.css';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*layout*/
+@import './styles/layout/base.css';
+@import './styles/layout/column.css';
+@import './styles/layout/grid.css';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*theme*/
+@import './styles/theme/color.css';
+@import './styles/theme/typography.css';
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*components*/
+@import './styles/components/list.css';
+@import './styles/components/map.css';
+@import './styles/components/select.css';
+@import './styles/components/nav.css';
+@import './styles/components/infographic.css';
+@import './styles/components/infographic-header.css';
+@import './styles/components/infographic-table.css';
+@import './styles/components/infographic-map.css';
+@import './styles/components/infographic-weather.css';
+@import './styles/components/infographic-graph.css';
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*mui*/
+@import './styles/mui/override.css';

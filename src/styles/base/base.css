@@ -1,0 +1,6 @@
+body {
+    padding: 20px;
+    background-color: var(--primary-accent-color);
+    color: var(--primary-font-color);
+}
+
