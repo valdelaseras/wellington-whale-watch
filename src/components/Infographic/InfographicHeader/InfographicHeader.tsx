@@ -1,37 +1,41 @@
 import React, { FC } from 'react';
-
+import {
+    getMostActiveMonth,
+    getTotalSightings,
+    getUniqueTotalOf
+} from "../../../service/service";
 
 interface InfographicHeaderProps {
-    year: string,
-    speciesTotal: number,
-    sightingsTotal: number,
+    year: number,
 }
 
 const InfographicHeader: FC<InfographicHeaderProps> = ( props ) => (
   <div data-testid="InfographicHeader">
     <header className="infographic-header">
         <div className="column">
-            <div className="column">
+            <div className="column phi a">
                 <div className="content">
                     <h1>{props.year}</h1>
                 </div>
             </div>
-            <div className="column three">
-                <div className="content">
-                    <h2>Total species</h2>
-                    <p>{props.speciesTotal}</p>
+            <div className="column phi b">
+                <div className="column three">
+                    <div className="content">
+                        <h2>Unique species</h2>
+                        <p>{getUniqueTotalOf( props.year, 'species' ) }</p>
+                    </div>
                 </div>
-            </div>
-            <div className="column three">
-                <div className="content">
-                    <h2>Total sightings</h2>
-                    <p>{props.sightingsTotal}</p>
+                <div className="column three">
+                    <div className="content">
+                        <h2>Total sightings</h2>
+                        <p>{getTotalSightings( props.year )}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="column three">
-                <div className="content">
-                    <h2>Lorem</h2>
-                    <p>Ipsum</p>
+                <div className="column three">
+                    <div className="content">
+                        <h2>Most active month</h2>
+                        <p>{getMostActiveMonth( props.year )}</p>
+                    </div>
                 </div>
             </div>
         </div>

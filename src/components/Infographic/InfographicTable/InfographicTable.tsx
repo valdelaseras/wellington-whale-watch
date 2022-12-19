@@ -1,39 +1,45 @@
 import React, { FC } from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { Box } from "@mui/material";
+import {formatDate, getSightings} from "../../../service/service";
+import {Typography} from "@mui/material";
 
-interface InfographicTableProps {}
+interface InfographicTableProps {
+    year: number,
+}
 
 const columns: GridColDef[] = [
-    { field: 'family', headerName: 'Family', width: 160 },
-    { field: 'species', headerName: 'Species', width: 160 },
-    { field: 'quantity', headerName: 'Approximate quantity', width: 160 },
-    { field: 'location', headerName: 'Location', width: 160 },
-    { field: 'date', headerName: 'Date and time', width: 160 },
+    { field: 'family', headerName: 'Family', flex: 1 },
+    { field: 'species', headerName: 'Species', flex: 1 },
+    { field: 'quantity', headerName: 'Approx. quantity', flex: 1 },
+    { field: 'location', headerName: 'Location', flex: 1 },
+    {
+        field: 'datetime',
+        headerName: 'Date and time',
+        flex: 1,
+        renderCell: ( props ) => (
+            <Typography>
+                { formatDate(props.row.datetime) }
+            </Typography>
+        )
+    },
 ]
 
-const rows = [
-    { id: '0', family: 'dolphin', species: 'orca', quantity: 8, location: 'Evans Bay', date: '248029' },
-    { id: '1', family: 'dolphin', species: 'bottlenose', quantity: 15, location: 'Evans Bay', date: '248029' },
-    { id: '2', family: 'dolphin', species: 'common', quantity: 150, location: 'Evans Bay', date: '248029' },
-    { id: '3', family: 'dolphin', species: 'orca', quantity: 5, location: 'Evans Bay', date: '248029' },
-]
-
-const InfographicTable: FC<InfographicTableProps> = () => (
-  <div data-testid="InfographicTable">
-    <div className="column">
-        <div className="content">
-            <Box sx={{ height: 500 }}>
+const InfographicTable: FC<InfographicTableProps> = ( props ) => {
+    return (
+    <div data-testid="InfographicTable">
+        <div className="column">
+            <div className="content">
                 <DataGrid sx={{ border: 'none', color: 'white' }}
-                          rows={rows}
+                          rows={ getSightings( props.year)}
                           columns={columns}
-                          pageSize={5}
-                          rowsPerPageOptions={[5]}
+                          autoHeight
+                          pageSize={50}
+                          rowsPerPageOptions={[50]}
                 />
-            </Box>
+            </div>
         </div>
-    </div>
-  </div>
-);
+      </div>
+    )
+};
 
 export default InfographicTable;

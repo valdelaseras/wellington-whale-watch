@@ -3,3 +3,15 @@ body {
     color: var(--primary-font-color);
     font-family: Helvetica, "sans-serif";
 }
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.88rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
