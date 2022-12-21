@@ -1,0 +1,26 @@
+.custom-map-marker {
+    width: 120px;
+    display: flex;
+    alignment: center;
+}
+
+.marker {
+    height: .7rem;
+    width: .7rem;
+    border-radius: 50%;
+    border: 2px solid #222222;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.marker.dolphin {
+    background-color: aqua;
+}
+
+.marker.ray {
+    background-color: honeydew;
+}
+
+.marker.whale {
+    background-color: hotpink;
+}

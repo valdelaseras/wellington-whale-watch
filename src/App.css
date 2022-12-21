@@ -12,10 +12,12 @@
 @import './styles/theme/typography.css';
 
 /*components*/
+@import './styles/components/btn.css';
 @import './styles/components/list.css';
 @import './styles/components/map.css';
 @import './styles/components/select.css';
 @import './styles/components/nav.css';
+@import './styles/components/custom-map-marker.css';
 @import './styles/components/infographic.css';
 @import './styles/components/infographic-header.css';
 @import './styles/components/infographic-table.css';

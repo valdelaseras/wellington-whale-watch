@@ -16,11 +16,11 @@ const Infographic: FC = () => {
                         <InfographicHeader year={year}/>
                     </section>
                 </div>
-                {/*<div className="column">*/}
-                {/*    <section>*/}
-                {/*        <InfographicMap/>*/}
-                {/*    </section>*/}
-                {/*</div>*/}
+                <div className="column">
+                    <section>
+                        <InfographicMap year={year}/>
+                    </section>
+                </div>
                 <div className="column">
                     <section>
                         <InfographicTable year={year}/>

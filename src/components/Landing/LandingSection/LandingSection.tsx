@@ -25,7 +25,7 @@ const LandingSection: FC<LandingSectionProps> = () => {
                                     <li key={year}>
                                         <Link to={`/sightings/${year}`}
                                               state={{ target: year }}>
-                                            <Button>
+                                            <Button className="btn">
                                                 { year }
                                             </Button>
                                         </Link>

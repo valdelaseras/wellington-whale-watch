@@ -5,7 +5,10 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "30",
     "location": "evans bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1671414890536
   },
   {
@@ -14,7 +17,10 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "not stated",
     "location": "worser bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1671414890536
   },
   {
@@ -23,7 +29,10 @@ export const sightings2022 = [
     "species": "orca",
     "quantity": "6",
     "location": "petone",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1655208000000
   },
   {
@@ -32,7 +41,10 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "300",
     "location": "breaker bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1660478400000
   },
   {
@@ -41,16 +53,22 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "300",
     "location": "breaker bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1655208000000
   },
   {
     "id": "5",
-    "family": "rays",
+    "family": "ray",
     "species": "eagle ray",
     "quantity": "1",
     "location": "breaker bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.085572,
+      "lng": 174.825018,
+    },
     "datetime": 1671414890536
   },
   {
@@ -59,7 +77,10 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "300",
     "location": "breaker bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1655208000000
   },
   {
@@ -68,7 +89,10 @@ export const sightings2022 = [
     "species": "humpback",
     "quantity": "1",
     "location": "cook straight",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.362042,
+      "lng": 174.767743,
+    },
     "datetime": 1655208000000
   },
   {
@@ -77,7 +101,10 @@ export const sightings2022 = [
     "species": "common dolphin",
     "quantity": "300",
     "location": "breaker bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1655208000000
   },
 ];
@@ -89,7 +116,10 @@ export const sightings2021 = [
     "species": "common dolphin",
     "quantity": "30",
     "location": "evans bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1671414890536
   },
   {
@@ -98,7 +128,10 @@ export const sightings2021 = [
     "species": "common dolphin",
     "quantity": "not stated",
     "location": "worser bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1671414890536
   },
 ];
@@ -110,7 +143,10 @@ export const sightings2020 = [
     "species": "common dolphin",
     "quantity": "30",
     "location": "evans bay",
-    "coords": "x,y",
+    "coords": {
+      "lat": -41.290071,
+      "lng": 174.804278,
+    },
     "datetime": 1671414890536
   },
 ];

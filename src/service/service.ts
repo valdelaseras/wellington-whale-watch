@@ -25,8 +25,26 @@ export const getSightings = ( year: number ): Sighting[] => {
             family: sighting.family,
             species: sighting.species,
             location: sighting.location,
+            coords: {
+                lat: sighting.coords.lat,
+                lng: sighting.coords.lng,
+            },
             datetime: new Date(sighting.datetime),
             quantity: sighting.quantity,
+        }
+    })
+}
+
+export const getMarkerData = ( year: number): MapMarker[] => {
+    const sightings = getSightings( year );
+
+    return sightings.map(( sighting ) => {
+        return {
+            coords: {
+                lat: sighting.coords.lat,
+                lng: sighting.coords.lng,
+            },
+            text: sighting.family,
         }
     })
 }
@@ -99,6 +117,17 @@ type Sighting = {
     family: string,
     species: string,
     location: string,
+    coords: Coordinates,
     datetime: Date,
     quantity?: string,
+}
+
+type Coordinates = {
+    lat: number,
+    lng: number
+}
+
+type MapMarker = {
+    coords: Coordinates,
+    text: string
 }
